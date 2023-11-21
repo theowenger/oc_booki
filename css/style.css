@@ -1,0 +1,601 @@
+/****** General ***********/
+* {
+    font-family: 'Raleway', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --main-color: #0065FC;
+    --main-bg-color: #F2F2F2;
+    --filter-bg-color: #DEEBFF;
+}
+
+.fa-solid {
+    color: var(--main-color);
+}
+
+.header-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 30px;
+}
+
+.header-container img {
+    max-width: 70px;
+    margin-top: 30px;
+}
+
+.header-navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 25%;
+}
+
+.header-navigation a {
+    padding: 15px;
+    border-top: 2px transparent solid;
+}
+
+.header-navigation a:hover {
+    border-top: 2px #0065FC solid;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+}
+
+.main-container {
+    width: 100%;
+    max-width: 1440px;
+    padding: 0 50px;
+    box-sizing: border-box;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.title-description {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 55px;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.localisation {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    max-width: 470px;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+
+.fa-location-dot {
+    font-size: 1.2em;
+    text-align: center;
+    color: black;
+    background-color: #F2F2F2;
+    border: 1px #F2F2F2 solid;
+    padding: 16px;
+    width: 20px;
+    border-radius: 10px 0px 0px 10px;
+}
+
+.search {
+    position: relative;
+    right: 4px;
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 15px;
+    border: 1px #F2F2F2 solid;
+}
+
+.buttonSearch {
+    position: relative;
+    right: 8px;
+    font-size: 1.2em;
+    padding: 15px;
+    border: 1px #0065FC solid;
+    background-color: #0065FC;
+    color: white;
+    border-radius: 0px 18px 18px 0px;
+    font-weight: 500;
+}
+
+button .fa-magnifying-glass {
+    display: none;
+    color: #d9d9d9;
+}
+
+/*Reglage des filtres*/
+
+.button-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.fa-money-bill-wave,
+.fa-person,
+.fa-heart,
+.fa-fire {
+    width: 30px;
+    font-size: 1.5rem;
+    margin-right: 15px;
+}
+
+.fa-child-reaching {
+    width: 18px;
+}
+
+.buttonFilter {
+    background-color: white;
+    border: 2px #d9d9d9 solid;
+    border-radius: 35px;
+    padding: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 20px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    font-family: raleway;
+    display: flex;
+    flex-direction: row;
+}
+
+.buttonFilter span {
+    font-weight: bolder;
+
+}
+
+.buttonFilter:hover {
+    transition: 500ms ease-in-out;
+    background-color: var(--filter-bg-color);
+}
+
+.fa-info {
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    margin-right: 15px;
+    border: 1px lightgrey solid;
+    border-radius: 50% 50% 50% 50%;
+    width: 10px;
+    height: 10px;
+    line-height: 10px;
+    text-align: center;
+    color: #0065FC;
+}
+
+.information {
+    display: flex;
+    flex-direction: row;
+    font-size: 1.2em;
+
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.information p {
+    justify-content: center;
+    align-items: center;
+}
+
+.section-title {
+    margin: 0;
+    font-size: 22px;
+}
+
+.card {
+    background-color: white;
+    border-radius: 20px;
+    padding: 5px;
+    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+}
+
+.card img {
+    object-fit: cover;
+}
+
+.card-title {
+    font-size: 16px;
+}
+
+.euro {
+    font-weight: 700;
+}
+
+.neutral-star {
+    color: var(--main-bg-color)
+}
+
+.location {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 100%;
+
+}
+
+.mainLocation {
+    background-color: #F2F2F2;
+    border-radius: 25px 25px 25px 25px;
+    padding: 1%;
+    display: flex;
+    flex-direction: column;
+    max-width: 63%;
+    min-width: 40%;
+}
+
+.containLocation {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+
+}
+
+/*les boites de chaque location*/
+
+.location-title {
+    margin-bottom: 25px;
+    font-size: 22px;
+}
+
+.boxLocation {
+    width: 29%;
+    height: 200px;
+    background-color: white;
+    border: 2px whitesmoke solid;
+    padding: 0.2%;
+    padding-bottom: 1%;
+    margin-bottom: 2%;
+    margin-left: 0.5%;
+    margin-right: 0.5%;
+    border-radius: 15px 15px 15px 15px;
+    box-shadow: 2px 2px 5px lightgray;
+}
+
+.boxLocation h3 {
+    padding-left: 5px;
+}
+
+.boxLocation p {
+    position: relative;
+    bottom: 4px;
+    padding-left: 5px;
+}
+
+.boxLocation i {
+    position: relative;
+    bottom: 0px;
+}
+
+.description-location {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 80px;
+}
+
+.containLocation :hover {
+    box-shadow: 4px 4px 5px lightgray;
+}
+
+.boxLocation :hover {
+    box-shadow: none;
+}
+
+.imgLocation {
+    width: 100%;
+    height: 55%;
+    border-radius: 15px 15px 0px 0px;
+    object-fit: cover;
+}
+
+.star-disabled {
+    color: var(--main-bg-color)
+}
+
+.display-more {
+    font-weight: 800;
+    margin-top: 20px;
+}
+
+/****** Hebergements And Populaires ***********/
+.hebergements-and-populaires {
+    display: flex;
+    justify-content: space-between;
+}
+
+.hebergements-and-populaires section {
+    background-color: var(--main-bg-color);
+    border-radius: 20px;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+/****** Hebergements ***********/
+.hebergements {
+    width: 65%;
+}
+
+/****** Populaires ***********/
+.populaires {
+    width: 32%;
+}
+
+.populaires-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.populaires-cards .card {
+    display: flex;
+    margin-top: 33px;
+}
+
+.populaires-cards img {
+    width: 33%;
+    height: 136px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.populaires-cards .card-content {
+    width: 67%;
+    padding-left: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.populaires-cards .card-title {
+    margin-top: 10px;
+    margin-bottom: 4px;
+}
+
+.populaires-cards .card-subtitle {
+    margin: 0;
+}
+
+.populaires-cards .card-rating {
+    margin-bottom: 5px;
+}
+
+
+/*Activity*/
+
+
+.activity {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.box-activity {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.link-activity {
+    width: 23%;
+    height: 450px;
+    border: 0px #F2F2F2 solid;
+    border-radius: 15px 15px 15px 15px;
+    box-shadow: 2px 2px 5px lightgray;
+}
+
+.link-activity h3 {
+    margin-top: 25px;
+}
+
+.imgActivity {
+
+    height: 80%;
+    width: 100%;
+    border-radius: 15px 15px 0px 0px;
+    object-fit: cover;
+
+}
+
+/*Le pied de page*/
+.bottomPage {
+    background-color: #F2F2F2;
+}
+
+.bottom__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 20px;
+}
+
+.propos {
+    width: 33%;
+}
+
+.propos h2 {
+    margin-bottom: 20px;
+}
+
+.propos p {
+    margin-bottom: 20px;
+}
+
+
+
+
+/* Le code ci-dessous correspond à la version responsive uniquement */
+
+/****** Media queries ***********/
+/* Medium devices (tablets, less/equal than 1024px) */
+@media (max-width: 1024px) {
+    .hebergements-and-populaires {
+        flex-direction: column;
+    }
+
+    .hebergements {
+        width: 100%;
+    }
+
+    .populaires {
+        width: 100%;
+        margin-top: 50px;
+    }
+
+    .populaires-cards {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .populaires-cards a {
+        width: 30%;
+    }
+
+    .populaires-cards .card-title {
+        font-size: 14px;
+    }
+
+    .populaires-cards .card-subtitle {
+        font-size: 13px;
+    }
+}
+
+/* Small devices (phones, less than 768px) */
+@media (max-width: 767.98px) {
+    /* ... */
+
+    .main-container {
+        padding: 0;
+    }
+
+    .header-container {
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .header-container img {
+        max-width: 200px;
+    }
+
+    .header-navigation {
+        margin-top: 25px;
+        width: 100%;
+        justify-content: space-around;
+    }
+
+    .header-navigation a {
+        width: 100%;
+        text-align: center;
+        padding-bottom: 12px;
+        border-top: none;
+        border-bottom: 3px transparent solid;
+    }
+
+    .header-navigation a:hover {
+        border-top: none;
+        border-bottom: 3px #0065FC solid;
+    }
+
+    .title-description {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .button-container {
+        flex-direction: column;
+    }
+
+    .buttonFilter {
+        margin-top: 5;
+        margin-bottom: 0;
+    }
+
+    .containLocation {
+        flex-direction: column;
+    }
+
+    .boxLocation {
+        width: 100%;
+        height: 300px;
+    }
+
+    .imgLocation {
+        height: 200px;
+    }
+
+    .populaires-cards {
+        flex-direction: column;
+    }
+
+    .populaires-cards a {
+        width: 100%;
+    }
+
+    .box-activity {
+        flex-direction: column;
+    }
+
+    .link-activity {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    .bottom__container {
+
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .propos {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    @media (max-width: 480px) {
+
+        button .fa-magnifying-glass {
+            display: inline;
+        }
+
+        .buttonSearch span {
+            display: none;
+        }
+    }
+
+    @media (max-width: 386px) {
+        .fa-location-dot {
+            display: none;
+        }
+    }
+}
