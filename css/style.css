@@ -166,8 +166,12 @@ button .fa-magnifying-glass {
 
 }
 
+.buttonFilter {
+    transition: 300ms ease-in-out;
+}
+
 .buttonFilter:hover {
-    transition: 500ms ease-in-out;
+    transition: 300ms ease-in-out;
     background-color: var(--filter-bg-color);
 }
 
@@ -410,6 +414,10 @@ button .fa-magnifying-glass {
     box-shadow: 2px 2px 5px lightgray;
 }
 
+.link-activity:hover {
+    box-shadow: 4px 4px 5px lightgray;
+}
+
 .link-activity h3 {
     margin-top: 25px;
 }
@@ -527,6 +535,26 @@ button .fa-magnifying-glass {
         border-bottom: 3px #0065FC solid;
     }
 
+    .search-menu-container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .localisation {
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        justify-content: center;
+    }
+
+    button .fa-magnifying-glass {
+        display: inline;
+    }
+
+    .buttonSearch span {
+        display: none;
+    }
+
     .title-description {
         padding-left: 10px;
         padding-right: 10px;
@@ -582,16 +610,7 @@ button .fa-magnifying-glass {
         margin-right: auto;
     }
 
-    @media (max-width: 480px) {
-
-        button .fa-magnifying-glass {
-            display: inline;
-        }
-
-        .buttonSearch span {
-            display: none;
-        }
-    }
+    @media (max-width: 480px) {}
 
     @media (max-width: 386px) {
         .fa-location-dot {
