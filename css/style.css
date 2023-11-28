@@ -50,6 +50,7 @@ html {
 
 .header-navigation a:hover {
     border-top: 2px #0065FC solid;
+    color: #0065FC;
 }
 
 body {
@@ -67,6 +68,11 @@ body {
 a {
     color: inherit;
     text-decoration: none;
+}
+
+h1 {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
 }
 
 .title-description {
@@ -129,7 +135,18 @@ button .fa-magnifying-glass {
 .button-container {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: baseline;
+    justify-content: baseline;
+    flex-wrap: wrap;
+}
+
+.button-container h2 {
+    font-size: 1.3rem;
+    margin-right: 5px;
+}
+
+.button-filter-container {
+    display: flex;
     flex-wrap: wrap;
 }
 
@@ -153,7 +170,7 @@ button .fa-magnifying-glass {
     padding: 15px;
     padding-left: 20px;
     padding-right: 20px;
-    margin: 20px;
+    margin: 10px;
     font-size: 1.1rem;
     cursor: pointer;
     font-family: raleway;
@@ -280,6 +297,10 @@ button .fa-magnifying-glass {
     box-shadow: 2px 2px 5px lightgray;
 }
 
+.boxLocation article {
+    height: 100%;
+}
+
 .boxLocation h3 {
     padding-left: 5px;
 }
@@ -398,12 +419,13 @@ button .fa-magnifying-glass {
     margin-bottom: 50px;
 }
 
-.box-activity {
+.box-activity ul {
     margin-top: 15px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    list-style-type: none;
 }
 
 .link-activity {
@@ -418,13 +440,23 @@ button .fa-magnifying-glass {
     box-shadow: 4px 4px 5px lightgray;
 }
 
+.link-activity article {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
 .link-activity h3 {
-    margin-top: 25px;
+
+    margin: 5px;
+    margin-bottom: 20px;
+    margin-top: 0px;
 }
 
 .imgActivity {
 
-    height: 80%;
+    height: 87%;
     width: 100%;
     border-radius: 15px 15px 0px 0px;
     object-fit: cover;
@@ -448,14 +480,16 @@ button .fa-magnifying-glass {
 
 .propos {
     width: 33%;
+    list-style-type: none;
 }
 
-.propos h2 {
+.propos li {
     margin-bottom: 20px;
+    padding-left: 15px;
 }
 
-.propos p {
-    margin-bottom: 20px;
+.propos li h2 {
+    font-size: 1.2rem;
 }
 
 
@@ -540,12 +574,6 @@ button .fa-magnifying-glass {
         padding-right: 15px;
     }
 
-    .localisation {
-        margin-left: auto;
-        margin-right: auto;
-        display: flex;
-        justify-content: center;
-    }
 
     button .fa-magnifying-glass {
         display: inline;
@@ -560,25 +588,26 @@ button .fa-magnifying-glass {
         padding-right: 10px;
     }
 
-    .button-container {
-        flex-direction: column;
-    }
-
-    .buttonFilter {
-        margin-top: 5px;
-        margin-bottom: 0;
-    }
-
     .containLocation {
         flex-direction: column;
+        width: 100%;
+    }
+
+    .hebergements-and-populaires section {
+        padding: 5%;
     }
 
     .boxLocation {
-        width: 100%;
+        width: 98%;
         height: 300px;
+        margin: 0;
+        padding: 0;
+        margin-bottom: 20px;
+
     }
 
     .imgLocation {
+        width: 100%;
         height: 200px;
     }
 
@@ -590,7 +619,11 @@ button .fa-magnifying-glass {
         width: 100%;
     }
 
-    .box-activity {
+    .activity h2 {
+        padding-left: 20px;
+    }
+
+    .box-activity ul {
         flex-direction: column;
     }
 
@@ -609,8 +642,6 @@ button .fa-magnifying-glass {
         margin-left: auto;
         margin-right: auto;
     }
-
-    @media (max-width: 480px) {}
 
     @media (max-width: 386px) {
         .fa-location-dot {
