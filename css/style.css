@@ -267,15 +267,6 @@ button .fa-magnifying-glass {
     min-width: 40%;
 }
 
-.containLocation {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    flex-wrap: wrap;
-
-
-}
-
 /*les boites de chaque location*/
 
 .location-title {
@@ -283,8 +274,16 @@ button .fa-magnifying-glass {
     font-size: 22px;
 }
 
+.containLocation {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
 .boxLocation {
     width: 29%;
+    min-width: 200px;
     height: 200px;
     background-color: white;
     border: 2px whitesmoke solid;
@@ -424,16 +423,19 @@ button .fa-magnifying-glass {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    flex-wrap: wrap;
     align-items: center;
     list-style-type: none;
 }
 
 .link-activity {
     width: 23%;
+    min-width: 280px;
     height: 450px;
     border: 0px #F2F2F2 solid;
     border-radius: 15px 15px 15px 15px;
     box-shadow: 2px 2px 5px lightgray;
+    margin: 10px;
 }
 
 .link-activity:hover {
@@ -448,15 +450,15 @@ button .fa-magnifying-glass {
 }
 
 .link-activity h3 {
-
+    height: 100%;
     margin: 5px;
-    margin-bottom: 20px;
-    margin-top: 0px;
+    margin-left: 15px;
+    padding-top: 5px;
 }
 
 .imgActivity {
 
-    height: 87%;
+    min-height: 400px;
     width: 100%;
     border-radius: 15px 15px 0px 0px;
     object-fit: cover;
@@ -635,7 +637,11 @@ button .fa-magnifying-glass {
     .bottom__container {
 
         flex-direction: column;
-        justify-content: center;
+        justify-content: flex-start;
+    }
+
+    .bottom__container ul {
+        width: 100%;
     }
 
     .propos {

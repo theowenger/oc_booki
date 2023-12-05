@@ -33,6 +33,15 @@ Passer le container activité a marseille en <ul> <li> CHECK !!!
 
 les titres du footer doivent etrte plus petit font size CHECK !!!
 
+TOUT les <a> possedent un href qui retournent sur la page href=# CHECK !!!
+
+En responsive sur footer, le texte passe a gauche + eviter le wrap 
+retour à la ligne CHECK !!!
+
+Texte activité a marseille + de margin top/left CHECK !!!
+
+
+
 
 
 # Faire gaff à l'indentation
